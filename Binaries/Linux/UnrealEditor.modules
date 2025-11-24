@@ -1,0 +1,8 @@
+{
+	"BuildId": "64fa805d-b27c-4102-8fbc-15388de30452",
+	"Modules": 
+	{
+		"GPUPointCloudRenderer": "libUnrealEditor-GPUPointCloudRenderer.so",
+		"GPUPointCloudRendererEditor": "libUnrealEditor-GPUPointCloudRendererEditor.so"
+	}
+}

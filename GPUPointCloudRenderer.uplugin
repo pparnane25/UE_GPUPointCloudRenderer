@@ -1,0 +1,45 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "EngineVersion": "5.4.0",
+  "FriendlyName": "GPU Point Cloud Renderer",
+  "Description": "A GPU-powered point cloud renderer.",
+  "Category": "Rendering",
+  "CreatedBy": "BISG (project level) based on the work of Valentin Kraft",
+  "CreatedByURL": "https://github.com/pparnane25/UE_GPUPointCloudRenderer",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": false,
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "WhitelistPlatforms": [ "Win64" ],
+  "Modules": [
+    {
+      "Name": "GPUPointCloudRenderer",
+      "Type": "Runtime",
+      "Enabled": true,
+      "LoadingPhase": "PreDefault"
+    },
+    {
+      "Name": "GPUPointCloudRendererEditor",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "CustomMeshComponent",
+      "Enabled": true
+    }
+  ],
+  "CompatibleEngineVersions": [
+    {
+        "VersionName": "5.4",
+        "MinVersion": "4.27.0",
+        "MaxVersion": "5.7.99"
+    }
+  ]
+}
