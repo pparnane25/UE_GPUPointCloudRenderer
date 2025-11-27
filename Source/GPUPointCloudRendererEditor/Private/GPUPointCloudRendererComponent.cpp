@@ -192,12 +192,15 @@ void UGPUPointCloudRendererComponent::CreateStreamingBaseMesh(int32 pointCount)
 	pointsPerAxis = GetUpperPowerOfTwo(pointsPerAxis);
 	auto totalPointCount = pointsPerAxis* pointsPerAxis;
 
-	//Check if update is neccessary
+	// Check if update is neccessary
+	// Doesn't try updating with static cloud, but how about while streaming?
+	UE_LOG(GPUPointCloudRenderer, Warning, TEXT("Checking if update of the cloud is needed"));
 	if (mBaseMesh && mPointCount == totalPointCount)
 		return;
 	if (pointCount == 0 || !mPointCloudCore)
 		return;
 
+	UE_LOG(GPUPointCloudRenderer, Warning, TEXT("Updating the point cloud"));
 	mBaseMesh = NewObject<UPointCloudMeshComponent>(this, FName("PointCloud Mesh"));
 
 	// Create base mesh
